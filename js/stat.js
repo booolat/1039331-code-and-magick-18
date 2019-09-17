@@ -45,6 +45,7 @@ window.renderStatistics = function (ctx, players, times) {
 
     ctx.fillStyle = '#000';
     ctx.fillText(players[i], indent, CLOUD_HEIGHT - GAP * 1.5);
+    ctx.fillText(Math.round(times[i]), indent, CLOUD_HEIGHT - GAP - FONT_GAP - ((BAR_HEIGHT * Math.round(times[i])) / maxTime) - GAP * 2);
     ctx.fillStyle = 'hsla(232, ' + Math.round(Math.random() * 100) + 1 + '%, 38%, 1)';
 
     if (players[i] === 'Вы') {
